@@ -150,8 +150,8 @@ npm i
 | 👤 Name                | 🌐 GitHub                                           |
 | ---------------------- | --------------------------------------------------- |
 | Md Yasin Hossain Akash | [@mdyhakash](https://github.com/mdyhakash)          |
-| CM Hasibul Hasan       | [GitHub Profile](https://github.com/cmhasibulhasan) |
-| Nusrat Ahmed Maisha    | [GitHub Profile](https://github.com/nusratamaisha)  |
+| CM Hasibul Hasan       | [@cmhasibulhasan](https://github.com/cmhasibulhasan) |
+| Nusrat Ahmed Maisha    | [@nusratamaisha](https://github.com/nusratamaisha)  |
 
 </div>
 
@@ -201,7 +201,7 @@ So, the project is **open-source**, but still **legally protected** under copyri
 
 <div align="center">
 
-**© 2025 PawFinder Team** — Md Yasin Hossain Akash, CM Hasibul Hasan, Nusrat Ahmed Maisha  
+**© 2025 PawFinder Team** — **Md Yasin Hossain Akash, CM Hasibul Hasan, Nusrat Ahmed Maisha**  
 This project is licensed under the MIT License. See LICENSE file for details..
 
 </div>
