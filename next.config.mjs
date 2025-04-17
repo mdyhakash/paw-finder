@@ -21,6 +21,7 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    domains: ['i.ibb.co.com'],
   },
   experimental: {
     webpackBuildWorker: true,

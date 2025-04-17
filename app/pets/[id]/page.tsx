@@ -22,13 +22,13 @@ export default function PetDetailsPage({ params }: { params: { id: string } }) {
       <div className="grid md:grid-cols-2 gap-8">
         <div>
           <div className="relative aspect-square rounded-lg overflow-hidden mb-4">
-            <Image src={pet.image || "/placeholder.svg"} alt={pet.name} fill className="object-cover" priority />
+            <Image src={pet.image || "/placeholder.png"} alt={pet.name} fill className="object-cover" priority />
           </div>
           <div className="grid grid-cols-4 gap-2">
             {pet.additionalImages?.map((img, i) => (
               <div key={i} className="relative aspect-square rounded-lg overflow-hidden">
                 <Image
-                  src={img || "/placeholder.svg"}
+                  src={img || "/placeholder.png"}
                   alt={`${pet.name} photo ${i + 1}`}
                   fill
                   className="object-cover"
