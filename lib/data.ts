@@ -1,5 +1,5 @@
 // Pet types
-export const petTypes = ["Dog", "Cat", "Bird", "Rabbit", "Fish", "Small Pet"]
+export const petTypes = ["Dog", "Cat", "Bird", "Rabbit", "Fish", "Small Pet"];
 
 // Breeds
 export const breeds = [
@@ -24,7 +24,7 @@ export const breeds = [
   { id: 19, name: "Betta", petType: "Fish" },
   { id: 20, name: "Hamster", petType: "Small Pet" },
   { id: 21, name: "Guinea Pig", petType: "Small Pet" },
-]
+];
 
 // Pets data
 const pets = [
@@ -42,15 +42,16 @@ const pets = [
     goodWithKids: true,
     description:
       "Max is a friendly and energetic Labrador Retriever who loves to play fetch and go for long walks. He is great with children and other pets.",
-    personality: "Friendly, energetic, and loves to play. Max is a quick learner and already knows several commands.",
+    personality:
+      "Friendly, energetic, and loves to play. Max is a quick learner and already knows several commands.",
     location: "San Francisco, CA",
     address: "123 Pet Street, San Francisco, CA 94101",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "https://i.ibb.co.com/hNcW9ch/Labrador-Retriever3.jpg",
     additionalImages: [
-      "/placeholder.svg?height=100&width=100",
-      "/placeholder.svg?height=100&width=100",
-      "/placeholder.svg?height=100&width=100",
-      "/placeholder.svg?height=100&width=100",
+      "https://i.ibb.co.com/3YsGrdrq/Labrador-Retriever2.jpg",
+      "https://i.ibb.co.com/hNcW9ch/Labrador-Retriever3.jpg",
+      "https://i.ibb.co.com/nq7k3G7v/Labrador-Retriever4.jpg",
+      "https://i.ibb.co.com/rG3NdhYF/Labrador-Retriever5.jpg",
     ],
   },
   {
@@ -67,14 +68,15 @@ const pets = [
     goodWithKids: true,
     description:
       "Luna is a beautiful Siamese cat with striking blue eyes. She is playful and affectionate, and loves to curl up in your lap for a nap.",
-    personality: "Curious, vocal, and affectionate. Luna enjoys interactive toys and being the center of attention.",
+    personality:
+      "Curious, vocal, and affectionate. Luna enjoys interactive toys and being the center of attention.",
     location: "Los Angeles, CA",
     address: "456 Feline Avenue, Los Angeles, CA 90001",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "https://i.ibb.co.com/Wq828qC/Siamese.jpg",
     additionalImages: [
-      "/placeholder.svg?height=100&width=100",
-      "/placeholder.svg?height=100&width=100",
-      "/placeholder.svg?height=100&width=100",
+      "https://i.ibb.co.com/dwMyB4n1/Siamese1.jpg",
+      "https://i.ibb.co.com/ZzWg87HG/Siamese2.jpg",
+      "https://i.ibb.co.com/6JN6FHjm/Siamese3.jpg",
     ],
   },
   {
@@ -95,8 +97,13 @@ const pets = [
       "Curious, friendly, and food-motivated. Charlie has a typical Beagle howl and will let you know when he's excited.",
     location: "New York, NY",
     address: "789 Bark Street, New York, NY 10001",
-    image: "/placeholder.svg?height=400&width=400",
-    additionalImages: ["/placeholder.svg?height=100&width=100", "/placeholder.svg?height=100&width=100"],
+    image: "https://i.ibb.co.com/jkhVknRb/Beagle.jpg",
+    additionalImages: [
+      "https://i.ibb.co.com/xSGzWbS1/Beagle1.jpg",
+      "https://i.ibb.co.com/jPDcmVnV/Beagle2.jpg",
+      "https://i.ibb.co.com/jkhVknRb/Beagle.jpg",
+      "https://i.ibb.co.com/xSGzWbS1/Beagle1.jpg",
+    ],
   },
   {
     id: "4",
@@ -116,11 +123,11 @@ const pets = [
       "Gentle, patient, and intelligent. Bella is not overly demanding of attention but enjoys being near her people.",
     location: "Chicago, IL",
     address: "101 Purr Lane, Chicago, IL 60601",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "https://i.ibb.co.com/MyWXg6Nc/Maine-Coon.jpg",
     additionalImages: [
-      "/placeholder.svg?height=100&width=100",
-      "/placeholder.svg?height=100&width=100",
-      "/placeholder.svg?height=100&width=100",
+      "https://i.ibb.co.com/g0hMSTx/Maine-Coon1.jpg",
+      "https://i.ibb.co.com/Ps2ftTBc/Maine-Coon2.jpg",
+      "https://i.ibb.co.com/Z6ZJt19p/Maine-Coon3.jpg",
     ],
   },
   {
@@ -137,11 +144,17 @@ const pets = [
     goodWithKids: true,
     description:
       "Rocky is a loyal and intelligent German Shepherd. He is well-trained and would make an excellent companion for an active family.",
-    personality: "Loyal, intelligent, and protective. Rocky is alert and quick to learn new commands.",
+    personality:
+      "Loyal, intelligent, and protective. Rocky is alert and quick to learn new commands.",
     location: "Seattle, WA",
     address: "202 Canine Court, Seattle, WA 98101",
-    image: "/placeholder.svg?height=400&width=400",
-    additionalImages: ["/placeholder.svg?height=100&width=100", "/placeholder.svg?height=100&width=100"],
+    image: "https://i.ibb.co.com/R4S8pzYT/German-Shepherd.jpg",
+    additionalImages: [
+      "https://i.ibb.co.com/Z6XMNRgK/German-Shepherd1.jpg",
+      "https://i.ibb.co.com/zHxWPNWC/German-Shepherd2.jpg",
+      "https://i.ibb.co.com/R4S8pzYT/German-Shepherd.jpg",
+      "https://i.ibb.co.com/Z6XMNRgK/German-Shepherd1.jpg",
+    ],
   },
   {
     id: "6",
@@ -157,14 +170,15 @@ const pets = [
     goodWithKids: true,
     description:
       "Oliver is a stunning Ragdoll with captivating blue eyes. He is known for going limp when picked up, true to his breed's name.",
-    personality: "Calm, affectionate, and docile. Oliver loves to be held and will follow you from room to room.",
+    personality:
+      "Calm, affectionate, and docile. Oliver loves to be held and will follow you from room to room.",
     location: "Austin, TX",
     address: "303 Whisker Way, Austin, TX 78701",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "https://i.ibb.co.com/TD1fdSgX/Ragdoll.jpg",
     additionalImages: [
-      "/placeholder.svg?height=100&width=100",
-      "/placeholder.svg?height=100&width=100",
-      "/placeholder.svg?height=100&width=100",
+      "https://i.ibb.co.com/0ybKyYLn/Ragdoll1.jpg",
+      "https://i.ibb.co.com/SXyTKpck/Ragdoll2.jpg",
+      "https://i.ibb.co.com/1YHL9h5p/Ragdoll3.jpg",
     ],
   },
   {
@@ -181,11 +195,16 @@ const pets = [
     goodWithKids: true,
     description:
       "Daisy is a beautiful Golden Retriever puppy full of love and energy. She is eager to please and would thrive in an active home.",
-    personality: "Playful, friendly, and eager to please. Daisy loves water and would enjoy a home with a yard.",
+    personality:
+      "Playful, friendly, and eager to please. Daisy loves water and would enjoy a home with a yard.",
     location: "Denver, CO",
     address: "404 Paw Path, Denver, CO 80201",
-    image: "/placeholder.svg?height=400&width=400",
-    additionalImages: ["/placeholder.svg?height=100&width=100", "/placeholder.svg?height=100&width=100"],
+    image: "https://i.ibb.co.com/2YPpdkhK/Golden-Retriever.jpg",
+    additionalImages: [
+      "https://i.ibb.co.com/5h8MfqYt/Golden-Retriever1.jpg",
+      "https://i.ibb.co.com/vCcc3V9n/Golden-Retriever2.jpg",
+      "https://i.ibb.co.com/99mhCBvX/Golden-Retriever3.jpg",
+    ],
   },
   {
     id: "8",
@@ -201,22 +220,24 @@ const pets = [
     goodWithKids: false,
     description:
       "Milo is a striking Bengal with a wild appearance but a domestic heart. He is very active and needs plenty of stimulation.",
-    personality: "Active, intelligent, and curious. Milo enjoys climbing and interactive toys that challenge his mind.",
+    personality:
+      "Active, intelligent, and curious. Milo enjoys climbing and interactive toys that challenge his mind.",
     location: "Portland, OR",
     address: "505 Meow Street, Portland, OR 97201",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "https://i.ibb.co.com/dwVQV561/Bengal.jpg",
     additionalImages: [
-      "/placeholder.svg?height=100&width=100",
-      "/placeholder.svg?height=100&width=100",
-      "/placeholder.svg?height=100&width=100",
+      "https://i.ibb.co.com/LdkgjCXv/Bengal1.jpg",
+      "https://i.ibb.co.com/hxYms2m8/Bengal2.jpg",
+      "https://i.ibb.co.com/7NKZFbQW/Bengal3.jpg",
+      "https://i.ibb.co.com/fzXk5Y5B/Bengal4.jpg",
     ],
   },
-]
+];
 
 // Veterinarians data
 const vets = [
   {
-    id: "1",
+    id: "101",
     name: "Dr. Sarah Johnson",
     clinic: "Pawsome Veterinary Clinic",
     specialties: ["general", "surgery", "dental"],
@@ -232,7 +253,7 @@ const vets = [
     nextAvailable: "Today",
   },
   {
-    id: "2",
+    id: "102",
     name: "Dr. Michael Chen",
     clinic: "Happy Paws Animal Hospital",
     specialties: ["general", "emergency", "dermatology"],
@@ -243,11 +264,12 @@ const vets = [
     phone: "(213) 555-5678",
     hours: "Mon-Sun: 24 Hours (Emergency)",
     image: "/placeholder.svg?height=300&width=300",
-    description: "Experienced veterinarian providing comprehensive care for all types of pets.",
+    description:
+      "Experienced veterinarian providing comprehensive care for all types of pets.",
     nextAvailable: "Tomorrow",
   },
   {
-    id: "3",
+    id: "103",
     name: "Dr. Emily Rodriguez",
     clinic: "Furry Friends Veterinary Care",
     specialties: ["general", "dental", "dermatology"],
@@ -258,11 +280,12 @@ const vets = [
     phone: "(212) 555-9012",
     hours: "Mon-Fri: 9AM-7PM, Sat-Sun: 10AM-4PM",
     image: "/placeholder.svg?height=300&width=300",
-    description: "Experienced veterinarian providing comprehensive care for all types of pets.",
+    description:
+      "Experienced veterinarian providing comprehensive care for all types of pets.",
     nextAvailable: "Tomorrow",
   },
   {
-    id: "4",
+    id: "104",
     name: "Dr. James Wilson",
     clinic: "Healthy Pets Clinic",
     specialties: ["general", "surgery", "emergency"],
@@ -273,15 +296,16 @@ const vets = [
     phone: "(312) 555-3456",
     hours: "Mon-Fri: 8AM-8PM, Sat: 9AM-5PM",
     image: "/placeholder.svg?height=300&width=300",
-    description: "Experienced veterinarian providing comprehensive care for all types of pets.",
+    description:
+      "Experienced veterinarian providing comprehensive care for all types of pets.",
     nextAvailable: "Tomorrow",
   },
-]
+];
 
 // Products data
 const products = [
   {
-    id: "1",
+    id: "11111",
     name: "Premium Dog Food",
     category: "food",
     petType: "dog",
@@ -296,19 +320,28 @@ const products = [
     image: "/placeholder.svg?height=400&width=400",
     inStock: true,
     rating: 4.8,
-    additionalImages: ["/placeholder.svg?height=100&width=100", "/placeholder.svg?height=100&width=100"],
+    additionalImages: [
+      "/placeholder.svg?height=100&width=100",
+      "/placeholder.svg?height=100&width=100",
+    ],
     reviews: [
       {
         name: "John D.",
         rating: 5,
         date: "2023-03-15",
-        comment: "My dog loves this food! His coat is shinier and he has more energy.",
+        comment:
+          "My dog loves this food! His coat is shinier and he has more energy.",
       },
-      { name: "Sarah M.", rating: 4, date: "2023-02-28", comment: "Good quality food, but a bit pricey." },
+      {
+        name: "Sarah M.",
+        rating: 4,
+        date: "2023-02-28",
+        comment: "Good quality food, but a bit pricey.",
+      },
     ],
   },
   {
-    id: "2",
+    id: "2222",
     name: "Interactive Cat Toy",
     category: "toys",
     petType: "cat",
@@ -334,11 +367,16 @@ const products = [
         date: "2023-04-02",
         comment: "My cat is obsessed with this toy! Best purchase ever.",
       },
-      { name: "Michael T.", rating: 3, date: "2023-03-20", comment: "It's good but the battery doesn't last long." },
+      {
+        name: "Michael T.",
+        rating: 3,
+        date: "2023-03-20",
+        comment: "It's good but the battery doesn't last long.",
+      },
     ],
   },
   {
-    id: "3",
+    id: "3333",
     name: "Adjustable Dog Collar",
     category: "accessories",
     petType: "dog",
@@ -352,19 +390,28 @@ const products = [
     image: "/placeholder.svg?height=400&width=400",
     inStock: true,
     rating: 4.5,
-    additionalImages: ["/placeholder.svg?height=100&width=100", "/placeholder.svg?height=100&width=100"],
+    additionalImages: [
+      "/placeholder.svg?height=100&width=100",
+      "/placeholder.svg?height=100&width=100",
+    ],
     reviews: [
       {
         name: "David L.",
         rating: 5,
         date: "2023-03-10",
-        comment: "Very sturdy and the color is vibrant. Perfect fit for my Lab.",
+        comment:
+          "Very sturdy and the color is vibrant. Perfect fit for my Lab.",
       },
-      { name: "Jessica K.", rating: 4, date: "2023-02-15", comment: "Good quality but runs a bit small." },
+      {
+        name: "Jessica K.",
+        rating: 4,
+        date: "2023-02-15",
+        comment: "Good quality but runs a bit small.",
+      },
     ],
   },
   {
-    id: "4",
+    id: "4444",
     name: "Cat Scratching Post",
     category: "accessories",
     petType: "cat",
@@ -379,19 +426,28 @@ const products = [
     image: "/placeholder.svg?height=400&width=400",
     inStock: false,
     rating: 4.6,
-    additionalImages: ["/placeholder.svg?height=100&width=100", "/placeholder.svg?height=100&width=100"],
+    additionalImages: [
+      "/placeholder.svg?height=100&width=100",
+      "/placeholder.svg?height=100&width=100",
+    ],
     reviews: [
       {
         name: "Amanda P.",
         rating: 5,
         date: "2023-04-05",
-        comment: "My cats love this! It's tall enough for them to fully stretch.",
+        comment:
+          "My cats love this! It's tall enough for them to fully stretch.",
       },
-      { name: "Robert J.", rating: 4, date: "2023-03-22", comment: "Good quality, but assembly was a bit tricky." },
+      {
+        name: "Robert J.",
+        rating: 4,
+        date: "2023-03-22",
+        comment: "Good quality, but assembly was a bit tricky.",
+      },
     ],
   },
   {
-    id: "5",
+    id: "5555",
     name: "Dog Dental Chews",
     category: "health",
     petType: "dog",
@@ -405,7 +461,10 @@ const products = [
     image: "/placeholder.svg?height=400&width=400",
     inStock: true,
     rating: 4.5,
-    additionalImages: ["/placeholder.svg?height=100&width=100", "/placeholder.svg?height=100&width=100"],
+    additionalImages: [
+      "/placeholder.svg?height=100&width=100",
+      "/placeholder.svg?height=100&width=100",
+    ],
     reviews: [
       {
         name: "Thomas B.",
@@ -413,11 +472,16 @@ const products = [
         date: "2023-03-28",
         comment: "These really work! My dog's breath is much better.",
       },
-      { name: "Laura M.", rating: 3, date: "2023-03-05", comment: "My dog likes them, but they don't last very long." },
+      {
+        name: "Laura M.",
+        rating: 3,
+        date: "2023-03-05",
+        comment: "My dog likes them, but they don't last very long.",
+      },
     ],
   },
   {
-    id: "6",
+    id: "6666",
     name: "Bird Cage Deluxe",
     category: "accessories",
     petType: "bird",
@@ -453,7 +517,7 @@ const products = [
     ],
   },
   {
-    id: "7",
+    id: "7777",
     name: "Fish Tank Filter",
     category: "accessories",
     petType: "fish",
@@ -467,14 +531,27 @@ const products = [
     image: "/placeholder.svg?height=400&width=400",
     inStock: true,
     rating: 4.5,
-    additionalImages: ["/placeholder.svg?height=100&width=100", "/placeholder.svg?height=100&width=100"],
+    additionalImages: [
+      "/placeholder.svg?height=100&width=100",
+      "/placeholder.svg?height=100&width=100",
+    ],
     reviews: [
-      { name: "Nancy T.", rating: 5, date: "2023-04-08", comment: "Works great! Water has never been clearer." },
-      { name: "Paul S.", rating: 4, date: "2023-03-20", comment: "Good filter, but a bit noisy." },
+      {
+        name: "Nancy T.",
+        rating: 5,
+        date: "2023-04-08",
+        comment: "Works great! Water has never been clearer.",
+      },
+      {
+        name: "Paul S.",
+        rating: 4,
+        date: "2023-03-20",
+        comment: "Good filter, but a bit noisy.",
+      },
     ],
   },
   {
-    id: "8",
+    id: "8888",
     name: "Small Pet Bedding",
     category: "accessories",
     petType: "small-pet",
@@ -488,41 +565,49 @@ const products = [
     image: "/placeholder.svg?height=400&width=400",
     inStock: true,
     rating: 4.5,
-    additionalImages: ["/placeholder.svg?height=100&width=100", "/placeholder.svg?height=100&width=100"],
+    additionalImages: [
+      "/placeholder.svg?height=100&width=100",
+      "/placeholder.svg?height=100&width=100",
+    ],
     reviews: [
       {
         name: "Melissa C.",
         rating: 5,
         date: "2023-04-12",
-        comment: "My guinea pigs love this bedding! It's soft and controls odor well.",
+        comment:
+          "My guinea pigs love this bedding! It's soft and controls odor well.",
       },
-      { name: "Brian K.", rating: 4, date: "2023-03-25", comment: "Good quality and lasts a long time." },
+      {
+        name: "Brian K.",
+        rating: 4,
+        date: "2023-03-25",
+        comment: "Good quality and lasts a long time.",
+      },
     ],
   },
-]
+];
 
 // Export functions to get data
 export function getPets() {
-  return pets
+  return pets;
 }
 
 export function getPetById(id: string) {
-  return pets.find((pet) => pet.id === id)
+  return pets.find((pet) => pet.id === id);
 }
 
 export function getVets() {
-  return vets
+  return vets;
 }
 
 export function getVetById(id: string) {
-  return vets.find((vet) => vet.id === id)
+  return vets.find((vet) => vet.id === id);
 }
 
 export function getProducts() {
-  return products
+  return products;
 }
 
 export function getProductById(id: string) {
-  return products.find((product) => product.id === id)
+  return products.find((product) => product.id === id);
 }
-
