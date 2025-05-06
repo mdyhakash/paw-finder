@@ -46,12 +46,21 @@ const pets = [
       "Friendly, energetic, and loves to play. Max is a quick learner and already knows several commands.",
     location: "San Francisco, CA",
     address: "123 Pet Street, San Francisco, CA 94101",
+<<<<<<< HEAD
     image: "https://i.ibb.co.com/hNcW9ch/Labrador-Retriever3.jpg",
     additionalImages: [
       "https://i.ibb.co.com/3YsGrdrq/Labrador-Retriever2.jpg",
       "https://i.ibb.co.com/hNcW9ch/Labrador-Retriever3.jpg",
       "https://i.ibb.co.com/nq7k3G7v/Labrador-Retriever4.jpg",
       "https://i.ibb.co.com/rG3NdhYF/Labrador-Retriever5.jpg",
+=======
+    image: "https://i.ibb.co.com/FkBzSSKH/dog1.jpg",
+    additionalImages: [
+      "/placeholder.png?height=100&width=100",
+      "/placeholder.png?height=100&width=100",
+      "/placeholder.png?height=100&width=100",
+      "/placeholder.png?height=100&width=100",
+>>>>>>> f126097c7be40dcc75e80f6f4e98f0be8c6f432b
     ],
   },
   {
@@ -317,7 +326,7 @@ const products = [
     weight: "15 lbs",
     dimensions: '24" x 16" x 4"',
     material: "N/A",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "https://i.ibb.co.com/zHDgDR5h/Pet-food-bowl-1.jpg",
     inStock: true,
     rating: 4.8,
     additionalImages: [

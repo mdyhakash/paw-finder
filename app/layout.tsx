@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "PawFinder - Find Your Perfect Pet",
   description: "Adopt pets, book vet appointments, and shop for pet supplies",
-    generator: 'v0.dev'
+  
 }
 
 export default function RootLayout({
