@@ -1,51 +1,95 @@
-"use client"
+"use client";
 
-import { CardFooter } from "@/components/ui/card"
-
-import { useSearchParams, useRouter } from "next/navigation"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Star, MapPin, Phone, Clock, Calendar } from "lucide-react"
-import { getVets } from "@/lib/data"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Calendar, Clock, MapPin, Phone, Star } from "lucide-react";
+import Image from "next/image";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function VetList() {
-  const router = useRouter()
-  const searchParams = useSearchParams()
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  const specialty = searchParams.get("specialty") || ""
-  const location = searchParams.get("location") || ""
+  const specialty = searchParams.get("specialty") || "";
+  const location = searchParams.get("location") || "";
 
-  // Filter vets based on search params
-  const vets = getVets().filter((vet) => {
-    if (specialty && specialty !== "all" && !vet.specialties.includes(specialty)) return false
-    if (location && !vet.location.toLowerCase().includes(location.toLowerCase())) return false
-    return true
-  })
+  const [vets, setVets] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  const handleBookAppointment = (vetId: string, vetName: string) => {
-    // Add vet information to the URL when booking an appointment
-    router.push(`/veterinary?vetId=${vetId}&vetName=${encodeURIComponent(vetName)}#appointment-form`)
-  }
+  useEffect(() => {
+    async function fetchVets() {
+      try {
+        const response = await fetch("http://localhost:8000/veterinarians/");
+        const data = await response.json();
+        setVets(data);
+      } catch (error) {
+        console.error("Failed to fetch veterinarians:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
 
-  if (vets.length === 0) {
+    fetchVets();
+  }, []);
+
+  // Filter vets based on specialty and location search params
+  const filteredVets = vets.filter((vet) => {
+    if (
+      specialty &&
+      specialty !== "all" &&
+      !vet.specialties.includes(specialty)
+    )
+      return false;
+    if (
+      location &&
+      !vet.location.toLowerCase().includes(location.toLowerCase())
+    )
+      return false;
+    return true;
+  });
+
+  const handleBookAppointment = (vetId, vetName) => {
+    router.push(
+      `/veterinary?vetId=${vetId}&vetName=${encodeURIComponent(
+        vetName
+      )}#appointment-form`
+    );
+  };
+
+  if (loading) return <p>Loading veterinarians...</p>;
+
+  if (filteredVets.length === 0)
     return (
       <div className="text-center py-8">
         <h3 className="text-lg font-medium">No veterinarians found</h3>
-        <p className="text-muted-foreground mt-2">Try adjusting your search filters</p>
+        <p className="text-muted-foreground mt-2">
+          Try adjusting your search filters
+        </p>
       </div>
-    )
-  }
+    );
 
   return (
     <div className="space-y-6 mt-6">
-      {vets.map((vet) => (
+      {filteredVets.map((vet) => (
         <Card key={vet.id}>
           <div className="md:flex">
             <div className="md:w-1/3 p-4">
               <div className="relative aspect-square md:aspect-[4/3] rounded-md overflow-hidden">
-                <Image src={vet.image || "/placeholder.svg"} alt={vet.name} fill className="object-cover" />
+                <Image
+                  src={vet.image || "/placeholder.svg"}
+                  alt={vet.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="mt-4 space-y-2 text-sm">
                 <div className="flex items-center">
@@ -65,15 +109,17 @@ export default function VetList() {
                   <div className="flex items-center">
                     <Star className="h-4 w-4 text-yellow-400 fill-yellow-400" />
                     <span className="ml-1 font-medium">{vet.rating}</span>
-                    <span className="text-muted-foreground ml-1">({vet.reviewCount})</span>
+                    <span className="text-muted-foreground ml-1">
+                      ({vet.reviewCount})
+                    </span>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {vet.specialties.map((specialty) => (
-                    <Badge key={specialty} variant="secondary">
-                      {specialty}
+                  {vet.specialties.map((spec) => (
+                    <Badge key={spec} variant="secondary">
+                      {spec}
                     </Badge>
                   ))}
                 </div>
@@ -99,7 +145,10 @@ export default function VetList() {
                 </p>
               </CardContent>
               <CardFooter>
-                <Button className="w-full md:w-auto" onClick={() => handleBookAppointment(vet.id, vet.name)}>
+                <Button
+                  className="w-full md:w-auto"
+                  onClick={() => handleBookAppointment(vet.id, vet.name)}
+                >
                   Book Appointment
                 </Button>
               </CardFooter>
@@ -108,6 +157,5 @@ export default function VetList() {
         </Card>
       ))}
     </div>
-  )
+  );
 }
-
