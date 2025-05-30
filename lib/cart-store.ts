@@ -20,6 +20,7 @@ type CartStore = {
   isFavorite: (id: string) => boolean
   getTotalItems: () => number
   getTotalPrice: () => number
+  getFavoritesCount: () => number
 }
 
 export const useCartStore = create<CartStore>()(
@@ -57,14 +58,27 @@ export const useCartStore = create<CartStore>()(
 
       toggleFavorite: (id) =>
         set((state) => {
-          const isFavorited = state.favorites.includes(id)
+          // Ensure we're working with strings only
+          if (typeof id !== "string") return state
 
-          return {
-            favorites: isFavorited ? state.favorites.filter((itemId) => itemId !== id) : [...state.favorites, id],
+          const currentFavorites = state.favorites.filter((fav): fav is string => typeof fav === "string")
+          const isFavorited = currentFavorites.includes(id)
+
+          if (isFavorited) {
+            return {
+              favorites: currentFavorites.filter((itemId) => itemId !== id),
+            }
+          } else {
+            return {
+              favorites: [...currentFavorites, id],
+            }
           }
         }),
 
-      isFavorite: (id) => get().favorites.includes(id),
+      isFavorite: (id) => {
+        const validFavorites = get().favorites.filter((fav): fav is string => typeof fav === "string")
+        return validFavorites.includes(id)
+      },
 
       getTotalItems: () => {
         return get().items.reduce((total, item) => total + item.quantity, 0)
@@ -73,10 +87,14 @@ export const useCartStore = create<CartStore>()(
       getTotalPrice: () => {
         return get().items.reduce((total, item) => total + item.price * item.quantity, 0)
       },
+
+      getFavoritesCount: () => {
+        const validFavorites = get().favorites.filter((fav): fav is string => typeof fav === "string")
+        return validFavorites.length
+      },
     }),
     {
       name: "pawfinder-cart",
     },
   ),
 )
-

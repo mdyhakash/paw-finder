@@ -15,37 +15,40 @@ export default function PetSearch() {
   const router = useRouter()
   const searchParams = useSearchParams()
 
-  const [type, setType] = useState(searchParams.get("type") || "")
-  const [breed, setBreed] = useState(searchParams.get("breed") || "")
+  // Initialize state from URL parameters
+  const [type, setType] = useState(searchParams.get("type") || "all")
+  const [breed, setBreed] = useState(searchParams.get("breed") || "all")
   const [location, setLocation] = useState(searchParams.get("location") || "")
-  const [age, setAge] = useState<number[]>([0, 15])
+  const [age, setAge] = useState<number[]>([
+    Number.parseInt(searchParams.get("minAge") || "0"),
+    Number.parseInt(searchParams.get("maxAge") || "15"),
+  ])
   const [isFilterOpen, setIsFilterOpen] = useState(false)
 
   // Filter breeds based on selected pet type
-  const filteredBreeds = type ? breeds.filter((b) => b.petType === type) : breeds
+  const filteredBreeds =
+    type && type !== "all" ? breeds.filter((b) => b.petType.toLowerCase() === type.toLowerCase()) : breeds
 
+  // Update URL with search parameters
   const handleSearch = () => {
-    const params = new URLSearchParams(searchParams)
+    const params = new URLSearchParams()
 
-    if (type) params.set("type", type)
-    else params.delete("type")
-
-    if (breed) params.set("breed", breed)
-    else params.delete("breed")
-
+    if (type && type !== "all") params.set("type", type)
+    if (breed && breed !== "all") params.set("breed", breed)
     if (location) params.set("location", location)
-    else params.delete("location")
 
     params.set("minAge", age[0].toString())
     params.set("maxAge", age[1].toString())
 
+    console.log("Setting search params:", Object.fromEntries(params.entries()))
     router.push(`/?${params.toString()}`)
     setIsFilterOpen(false)
   }
 
+  // Reset all filters
   const handleReset = () => {
-    setType("")
-    setBreed("")
+    setType("all")
+    setBreed("all")
     setLocation("")
     setAge([0, 15])
     router.push("/")
@@ -65,6 +68,9 @@ export default function PetSearch() {
                 className="pl-8"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") handleSearch()
+                }}
               />
             </div>
           </div>
@@ -76,9 +82,9 @@ export default function PetSearch() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Types</SelectItem>
-                {petTypes.map((type) => (
-                  <SelectItem key={type} value={type}>
-                    {type}
+                {petTypes.map((petType) => (
+                  <SelectItem key={petType} value={petType}>
+                    {petType}
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -90,9 +96,9 @@ export default function PetSearch() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Breeds</SelectItem>
-                {filteredBreeds.map((breed) => (
-                  <SelectItem key={breed.id} value={breed.name}>
-                    {breed.name}
+                {filteredBreeds.map((breedItem) => (
+                  <SelectItem key={breedItem.id} value={breedItem.name}>
+                    {breedItem.name}
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -119,9 +125,9 @@ export default function PetSearch() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="all">All Types</SelectItem>
-                        {petTypes.map((type) => (
-                          <SelectItem key={type} value={type}>
-                            {type}
+                        {petTypes.map((petType) => (
+                          <SelectItem key={petType} value={petType}>
+                            {petType}
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -136,9 +142,9 @@ export default function PetSearch() {
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="all">All Breeds</SelectItem>
-                        {filteredBreeds.map((breed) => (
-                          <SelectItem key={breed.id} value={breed.name}>
-                            {breed.name}
+                        {filteredBreeds.map((breedItem) => (
+                          <SelectItem key={breedItem.id} value={breedItem.name}>
+                            {breedItem.name}
                           </SelectItem>
                         ))}
                       </SelectContent>
@@ -180,4 +186,3 @@ export default function PetSearch() {
     </Card>
   )
 }
-

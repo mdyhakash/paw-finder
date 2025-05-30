@@ -12,10 +12,11 @@ interface FavoritePetButtonProps {
 
 export default function FavoritePetButton({ petId, petName }: FavoritePetButtonProps) {
   const { toggleFavorite, favorites } = useCartStore()
-  const isFavorited = favorites.includes(petId)
+  const favoriteId = `pet_${petId}`
+  const isFavorited = favorites.includes(favoriteId)
 
   const handleToggleFavorite = () => {
-    toggleFavorite(petId)
+    toggleFavorite(favoriteId)
 
     toast({
       title: !isFavorited ? "Added to favorites" : "Removed from favorites",
@@ -37,4 +38,3 @@ export default function FavoritePetButton({ petId, petName }: FavoritePetButtonP
     </Button>
   )
 }
-

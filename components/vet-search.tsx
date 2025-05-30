@@ -60,4 +60,3 @@ export default function VetSearch() {
     </div>
   )
 }
-

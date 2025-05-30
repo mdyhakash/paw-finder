@@ -32,4 +32,3 @@ export default function PetMap({ location, address }: PetMapProps) {
 
   return <div ref={mapRef} className="h-[300px] w-full rounded-md overflow-hidden"></div>
 }
-

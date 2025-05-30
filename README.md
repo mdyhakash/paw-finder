@@ -37,7 +37,6 @@
 **PawFinder** is a comprehensive pet adoption platform designed to connect animals in need with loving homes. Our mission is to simplify the pet adoption process, provide essential resources for pet owners, and offer a marketplace for quality pet supplies.
 
 The platform serves as a one-stop solution for:
-
 - Finding and adopting pets from shelters and rescue organizations
 - Booking veterinary appointments with specialized professionals
 - Purchasing pet supplies and essentials
@@ -138,70 +137,5 @@ Whether you're looking to adopt a new furry friend, need veterinary care, or wan
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/mdyhakash/paw-finder.git
+git clone https://github.com/yourusername/pawfinder.git
 cd pawfinder
-npm i
-```
-
-## 👨‍💻 Developers
-
-<div align="left">
-
-| 👤 Name                | 🌐 GitHub                                           |
-| ---------------------- | --------------------------------------------------- |
-| Md Yasin Hossain Akash | [@mdyhakash](https://github.com/mdyhakash)          |
-| CM Hasibul Hasan       | [@cmhasibulhasan](https://github.com/cmhasibulhasan) |
-| Nusrat Ahmed Maisha    | [@nusratamaisha](https://github.com/nusratamaisha)  |
-
-</div>
-
----
-
-## 📚 What is Copyright Law?
-
-Copyright law is a legal framework that protects original works of authorship, including software, websites, images, music, writing, and more. It gives the creator or copyright holder the exclusive rights to:
-
-- 📦 Reproduce the work
-- 📤 Distribute copies
-- 🎭 Display or perform it publicly
-- 🧩 Create derivative works
-
-These rights are **automatic** upon creation and fixation of the work in a tangible form — you don’t need to register to have copyright protection, but **registration** can offer additional legal benefits.
-
----
-
-## 🛡️ Why It Matters for PawFinder
-
-Your project includes:
-
-- 💻 Code (frontend/backend)
-- 🎨 Logos and images
-- 🧠 UI/UX designs
-- 📝 Written content/documentation
-
-All of these are **automatically protected** under copyright law, meaning:
-
-- ✅ Others can’t copy or use them without permission
-- ✅ You can take legal action if someone violates your rights
-- ✅ You control how your project is shared (via license, e.g., MIT)
-
----
-
-## 📄 MIT License & Copyright
-
-Since you’re using the **MIT License**, it means:
-
-- 🛠️ Others can use, modify, and distribute your code freely
-- 🏷️ They must include your original copyright notice
-- ⚠️ The license disclaims all warranties and liability
-
-So, the project is **open-source**, but still **legally protected** under copyright law.
-
-## ©️ Copyright
-
-<div align="center">
-
-**© 2025 PawFinder Team** — **Md Yasin Hossain Akash, CM Hasibul Hasan, Nusrat Ahmed Maisha**  
-This project is licensed under the MIT License. See LICENSE file for details..
-
-</div>
