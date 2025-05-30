@@ -37,6 +37,7 @@
 **PawFinder** is a comprehensive pet adoption platform designed to connect animals in need with loving homes. Our mission is to simplify the pet adoption process, provide essential resources for pet owners, and offer a marketplace for quality pet supplies.
 
 The platform serves as a one-stop solution for:
+
 - Finding and adopting pets from shelters and rescue organizations
 - Booking veterinary appointments with specialized professionals
 - Purchasing pet supplies and essentials
@@ -139,3 +140,52 @@ Whether you're looking to adopt a new furry friend, need veterinary care, or wan
 ```bash
 git clone https://github.com/yourusername/pawfinder.git
 cd pawfinder
+
+Frontend Setup (Next.js + Clerk)
+bash
+cd pawfinder
+npm install 
+# or
+yarn install
+
+# Start the development server
+npm run dev
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=sign-up
+
+
+Backend Setup (Django REST Framework)
+cd backend
+python -m venv env
+source env/bin/activate  # On Windows use `env\Scripts\activate`
+pip install -r requirements.txt
+
+# Apply migrations
+python manage.py migrate
+
+# Create a superuser (optional)
+python manage.py createsuperuser
+
+# Start the Django development server
+python manage.py runserver
+
+.env
+DEBUG=True
+SECRET_KEY=your_django_secret_key
+ALLOWED_HOSTS=localhost,127.0.0.1
+DATABASE_URL=postgres://username:password@localhost:5432/pawfinder
+
+```
+
+## 👥 Developers
+
+| Name                   | GitHub                                               | LinkedIn                                                               |
+| ---------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------- |
+| Md Yasin Hossain Akash | [@mdyhakash](https://github.com/mdyhakash)           | [mdyhakash](https://www.linkedin.com/in/mdyhakash/)                    |
+| Nusrat Ahmmed Maisha   | [@nusratamaisha](https://github.com/nusratamaisha)   | [Nusrat Ahmmed Maisha](https://www.linkedin.com/in/nusratamaisha/)     |
+| C M Hasibul Hasan      | [@cmhasibulhasan](https://github.com/cmhasibulhasan) | [C M Hasibul Hasan](https://www.linkedin.com/in/hasibul-hasan-82b152284/) |
+
+|
