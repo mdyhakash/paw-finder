@@ -130,7 +130,7 @@
 //   );
 // }
 "use client";
-import AdoptionForm from "@/components/adoption-form";
+import { AdoptionForm } from "@/components/adoption-form";
 import FavoritePetButton from "@/components/favorite-pet-button";
 import PetMap from "@/components/pet-map";
 import { Badge } from "@/components/ui/badge";
