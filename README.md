@@ -187,5 +187,3 @@ DATABASE_URL=postgres://username:password@localhost:5432/pawfinder
 | Md Yasin Hossain Akash | [@mdyhakash](https://github.com/mdyhakash)           | [mdyhakash](https://www.linkedin.com/in/mdyhakash/)                    |
 | Nusrat Ahmmed Maisha   | [@nusratamaisha](https://github.com/nusratamaisha)   | [Nusrat Ahmmed Maisha](https://www.linkedin.com/in/nusratamaisha/)     |
 | C M Hasibul Hasan      | [@cmhasibulhasan](https://github.com/cmhasibulhasan) | [C M Hasibul Hasan](https://www.linkedin.com/in/hasibul-hasan-82b152284/) |
-
-|
